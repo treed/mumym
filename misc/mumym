@@ -1,0 +1,25 @@
+#!/bin/sh
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+DAEMON=/usr/bin/mumym.py
+PIDFILE=/var/run/mumym.pid
+
+test -x $DAEMON || exit 0
+
+case "$1" in
+  start)
+	start-stop-daemon --start --exec $DAEMON -- --depsamruhe --pidfile=$PIDFILE
+  ;;
+  stop)
+  	start-stop-daemon --stop --pidfile $PIDFILE
+  ;;
+  restart|force-reload)
+  	$0 stop
+	$0 start
+  ;;
+  *)
+  	echo "Usage: /usr/init.d/mumym {start|stop|restart|force-reload}"
+	exit 1
+esac
+
+exit 0
