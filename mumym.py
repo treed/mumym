@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # mumym - Lojbanic word game
-# Copyright (c) 2002-04 by Theodore Reed (rizen)
+# Copyright (c) 2009 by Theodore Reed (rizen)
 # 
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -51,7 +51,7 @@ import string, random, time, re, ConfigParser, getopt, sys, os, logging
 from twisted.words.protocols import irc
 from twisted.internet import reactor, protocol
 
-version = "0.9.1"
+version = "0.9.2-devel"
 
 declaration = """.i la mumym. pe li """ + version + """ se ponse la sIodor.rid. ti'u li 2002 bi'o 
 2004 .i my cu bapzifre samselpla .i lenu galfi my. kei se curmi fi la gypyly. 
